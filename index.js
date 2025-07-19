@@ -22,12 +22,14 @@ app.use((req, res, next) => {
 });
 //console.log(process.env);//****************************************************************************** */
 
-/*AUTH
+//AUTH
 
 import authRouter from "./src/routes/auth.router.js";
-app.use("/api/auth", authRouter);
+app.use( authRouter);
+//app.use(authRouter);
+//router.post("/api/login",login);
+//router.post("/api/login",login);
 
-*/
 
 
 const PORT = process.env.PORT || 3001;
