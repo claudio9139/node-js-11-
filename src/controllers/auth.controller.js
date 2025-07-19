@@ -4,8 +4,8 @@ import jwt from "jsonwebtoken";
 
 const default_user = {
   id: 1,
-  email: "x@x.com",
-  password: "123"
+  email: "claudio.gordon@eaton.com",
+  password: "Insect"
 };
 
 export const login = async (req, res) => {
@@ -28,35 +28,3 @@ export const login = async (req, res) => {
 
 
 
-/*
-
-import jwt from "jsonwebtoken";
-
-const default_user = {
-  id: 1,
-  email: "user@email.com",
-  password: "strongPass123",
-};
-
-export const login = (req, res) => {
-  const { email, password } = req.body;
-  console.log(email,password);
-  //const user = { id: 1 };
-
-  if (email == "user@email.com" && password == "strongPass123") {
-    const payload = { user };
-    const expiration = { expiresIn: "1h" };
-
-    const token = jwt.sign(payload, process.env.JWT_SECRET, expiration);
-
-    res.json({ token });
-  } else {
-    return res.sendStatus(401);
-  }
-
-  res.json({ messge: "ok" });
-
-
-};
-
-*/

@@ -17,6 +17,9 @@ app.get("/", (req, res) => {
 import productsRouter from "./src/routes/products.router.js";
 app.use("/api", productsRouter);
 
+import authRouter from "./src/routes/auth.router.js";
+app.use("/auth", authRouter);
+
 app.use((req, res, next) => {
   res.status(404).json({ error: "Not Found" });
 });
@@ -24,8 +27,7 @@ app.use((req, res, next) => {
 
 //AUTH
 
-import authRouter from "./src/routes/auth.router.js";
-app.use( authRouter);
+
 //app.use(authRouter);
 //router.post("/api/login",login);
 //router.post("/api/login",login);
