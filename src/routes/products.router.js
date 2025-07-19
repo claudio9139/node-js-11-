@@ -24,8 +24,9 @@ import { auth } from "../middlewares/auth.middleware.js";
 router.get("/products", getAllProducts);
 router.get("/products/search", searchProduct);
 router.get("/products/:id", getProductById);
+//router.post("/products", createProduct);
 
-router.post("/products", createProduct);
+router.post("/products",auth, createProduct);
 
 
 
